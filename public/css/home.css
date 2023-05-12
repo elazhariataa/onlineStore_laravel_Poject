@@ -1,0 +1,186 @@
+/* ---------------- cards style ------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+.cards{
+    margin: 30px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+    height: fit-content;
+    background: #343a40;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #e6e6e6;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: #343a40;
+}
+
+.card .imgBox {
+    align-self: center;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+ 
+.card .imgBox img {
+    max-width: 90%;
+    
+    transition: .5s;
+}
+/*
+.card:hover .imgBox img {
+    max-width: 50%;
+      
+} */
+
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+  margin-top: 15px;
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.card .contentBox .description {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #343a40;
+  text-decoration: none;
+  background: #e6e6e6;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.mouse {
+  height: 300px;
+  width: auto;
+}
+
+/* ------------------ filter styles --------------------- */
+.filterForm form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+fieldset {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.form-g {
+  margin-bottom: 1rem;
+}
+
+label {
+  /* display: block; */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  box-shadow: none;
+  padding: 0.5rem;
+  width: 25%;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.form-error {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
